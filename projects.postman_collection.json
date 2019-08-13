@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "bd873123-a259-4b10-9cfd-bcd5c13b0d1f",
+		"name": "projects",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "all projects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/projects",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "select 'lotr'",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/projects?project=lotr",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"projects"
+					],
+					"query": [
+						{
+							"key": "project",
+							"value": "lotr"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "select 'status' and sort by 'shot'",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/projects?status=scheduled&sort_by=shot",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"projects"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "scheduled"
+						},
+						{
+							"key": "sort_by",
+							"value": "shot"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sort by 'finish_date'",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/projects?sort_by=finish_date",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"projects"
+					],
+					"query": [
+						{
+							"key": "sort_by",
+							"value": "finish_date"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter 'king kong' and 'lotr'",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/projects?filter=lotr,king%20kong",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"projects"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "lotr,king%20kong"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "created after date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/projects?created_after=2009-02-04T22:44:30.652Z",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"projects"
+					],
+					"query": [
+						{
+							"key": "created_after",
+							"value": "2009-02-04T22:44:30.652Z"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
